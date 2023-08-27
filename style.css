@@ -1,0 +1,109 @@
+body {
+    background-image: url('./assets/moon.jpg');
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.tasbee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.title {
+    font-size: xx-large;
+    font-style: italic;
+    color: white;
+    font-family: cursive;
+}
+
+i {
+    display: block;
+    padding: 0.2rem;
+    font-size: 3.5rem;
+    width: 1rem;
+    position: relative;
+    bottom: 2.1rem;
+    right: 1.3333rem;
+    color: white;
+
+}
+
+.counter-input {
+    border: none;
+    width: 18rem;
+    height: 8rem;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8B8000;
+    font-size: 9rem;
+    background-color: lavenderblush;
+    caret-color: transparent;
+    text-align: center;
+    filter: drop-shadow(0 0 1rem rgb(0, 0, 0));
+    border-radius: 10px
+}
+
+
+.rectangular-btn {
+    width: 10rem;
+    height: 10rem;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.arrow-btn {
+    width: 3rem;
+    height: 3rem;
+    font-size: 25px;
+    border: none;
+    background-color: transparent;
+    color:  #8B8000;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    transition: filter 0.5s;
+}
+
+.arrow-btn:hover {
+    color: white;
+    background-image: radial-gradient(circle 975px at 2.6% 48.3%,  #8B8000 0%, rgba(95, 184, 224, 1) 99.7%);
+}
+
+.arrow-btn:active {
+    filter: drop-shadow(0 0 3rem #8B8000);
+}
+
+.reset-btn {
+    color: white;
+    background-color: #8B8000;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: cursive;
+    width: 10rem;
+    font-weight: 800;
+    transition: filter 0.5s;
+}
+.reset-btn:hover {
+    color:  #8B8000;
+    background-image: radial-gradient(circle 975px at 2.6% 48.3%, white 0%, rgba(95, 184, 224, 1) 99.7%);
+}
+.reset-btn:active {
+    filter: drop-shadow(0 0 5rem #8B8000);
+}
+
