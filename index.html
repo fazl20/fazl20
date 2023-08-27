@@ -5,23 +5,143 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>tasbeeh couter</title>
-  
+    <title>تَسْبِيح counter</title>
+  <style type="text/css">
+
+body {
+    background-color: var(--background-color);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    overflow: hidden;
+    --background-color: #009000;
+    --text-color: #ffffff;
+}
+
+
+.tasbee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.title {
+    font-size: 4rem;
+    font-style: italic;
+    color: var(--text-color);
+    font-family: cursive;
+}
+
+i {
+    display: block;
+    padding: 0.2rem;
+    font-size: 3.5rem;
+    width: 1rem;
+    position: relative;
+    bottom: 2.1rem;
+    right: 1.3333rem;
+    color: var(--text-color);
+
+}
+
+.counter-input {
+    border: none;
+    height: 8rem;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    font-size: 9rem;
+    background-color: transparent;
+    caret-color: transparent;
+    text-align: center;
+    filter: drop-shadow(0 0 3rem var(--text-color));
+    border-radius: 10px
+}
+
+
+.rectangular-btn {
+    width: 10rem;
+    height: 10rem;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.arrow-btn {
+    width: 3rem;
+    height: 3rem;
+    font-size: 25px;
+    border: none;
+    background-color: transparent;
+    color: var(--text-color);
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    transition: filter 0.5s;
+}
+
+.reset-btn {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-size: 1.5rem;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: cursive;
+    width: 10rem;
+    font-weight: 800;
+    transition: filter 0.5s;
+}
+.reset-btn:hover,.arrow-btn:hover {
+    background-color:  var(--text-color);
+    color: var(--background-color);
+}
+.reset-btn:active ,.arrow-btn:active {
+    filter: drop-shadow(0 0 5rem var(--text-color));
+}
+
+
+
+
+  </style>
 </head>
 
 <body> 
     <div class="tasbee">
-        <h1 class="title">Tasbee Counter</h1>
+        <h1 class="title">تَسْبِيح (tasbih) Counter</h1>
             <input id='input-count' class='counter-input' type="text" name="tasbee" id="tasbee" onkeydown="return false;"   value="0">
             <div class="rectangular-btn">
                 <button class="arrow-btn up" onclick="count('inc')">▲</button>
                 <button class="arrow-btn down" onclick="count('dec')">▼</button>
             </div>
-            <button class="reset-btn" onclick="count('res')">Reset</button>  
+            <button class="reset-btn" onclick="count('res')">Clear</button>  
     </div>
-  
-    <script src="./script.js"></script>
+    <script>
+
+const el = document.getElementById('input-count');
+const count = (type) => {
+    if (type === 'dec') {
+        el.value =  parseInt(el.value) == 0 ?  parseInt(el.value) :  parseInt(el.value) - 1
+    } else if (type === 'res') {
+        el.value = 0;
+    }    
+    else {
+        el.value =  parseInt(el.value) + 1;
+    }
+}
+
+
+    </script>
 </body>
 
 </html>
